@@ -1,0 +1,99 @@
+html {
+  --lumo-primary-color: hsl(164, 72%, 27%);
+  --lumo-primary-text-color: hsl(164, 72%, 24%);
+  --lumo-primary-color-10pct: hsla(164, 72%, 27%, .10);
+  --lumo-border-radius-m: 12px;
+  background: #f4f7f6;
+}
+
+.policy-page {
+  box-sizing: border-box;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px !important;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(34, 139, 109, .10), transparent 32%),
+    radial-gradient(circle at 88% 80%, rgba(35, 86, 128, .08), transparent 30%),
+    #f4f7f6;
+}
+
+.upload-card {
+  width: min(100%, 520px);
+  box-sizing: border-box;
+  padding: 40px;
+  border: 1px solid rgba(20, 56, 48, .10);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 22px 60px rgba(24, 55, 48, .10);
+}
+
+.upload-card h1 {
+  margin: 8px 0 8px;
+  color: #173f36;
+  font-size: clamp(1.8rem, 5vw, 2.35rem);
+  letter-spacing: -.035em;
+}
+
+.eyebrow {
+  color: var(--lumo-primary-text-color);
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .16em;
+}
+
+.description {
+  margin: 0 0 26px;
+  color: #55716a;
+  line-height: 1.55;
+}
+
+.file-picker {
+  box-sizing: border-box;
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px dashed #9dbab2;
+  border-radius: 14px;
+  background: #f8fbfa;
+}
+
+.selected-file {
+  overflow: hidden;
+  color: #506961;
+  font-size: .9rem;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.constraints {
+  display: block;
+  margin: 8px 2px 24px;
+  color: #6d827d;
+  font-size: .78rem;
+}
+
+.upload-bridge {
+  display: none;
+}
+
+.policy-nav { gap: 20px; margin: 0 0 28px; font-size: .86rem; }
+.policy-nav a { color: #23715d; text-decoration: none; }
+.policy-nav a:hover { text-decoration: underline; }
+.chat-card { width: min(100%, 800px); margin: 24px auto; }
+.chat-page { justify-content: flex-start; height: auto !important; }
+.chat-messages {
+  display: flex; flex-direction: column; gap: 14px;
+  min-height: 220px; max-height: 42vh; overflow-y: auto;
+  margin: 24px 0; padding: 4px 8px 4px 0;
+}
+.chat-bubble { max-width: 88%; padding: 13px 17px; border-radius: 15px; }
+.chat-assistant { align-self: flex-start; background: #edf5f1; color: #234f41; }
+.chat-user { align-self: flex-end; background: #276f59; color: white; }
+.chat-speaker { font-size: .7rem; font-weight: 700; opacity: .8; }
+.chat-bubble p { margin: 5px 0 0; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .92rem; }
+.chat-status { display: block; margin-top: 12px; font-size: .75rem; color: #6d827d; }
+
+@media (max-width: 600px) {
+  .policy-page { padding: 16px !important; }
+  .upload-card { padding: 26px 22px; }
+}

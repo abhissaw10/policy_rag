@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: policy-rag
+  servlet:
+    multipart:
+      max-file-size: 25KB
+      max-request-size: 30KB
+
+vaadin:
+  launch-browser: false
+
+app:
+  observability:
+    events-file: logs/chat-events.jsonl
+  groq:
+    base-url: https://api.groq.com/openai/v1
+    api-key: ${GROQ_API_KEY:}
+    model: ${GROQ_MODEL:openai/gpt-oss-20b}
+  chroma:
+    base-url: ${CHROMA_URL:http://localhost:8000}
+    tenant: ${CHROMA_TENANT:default_tenant}
+    database: ${CHROMA_DATABASE:default_database}
+    collection: ${CHROMA_COLLECTION:hr_policies_bge_small_en_v15_q_v1}

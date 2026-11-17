@@ -1,0 +1,9 @@
+services:
+  chroma:
+    image: chromadb/chroma:1.5.9
+    ports:
+      - "8000:8000"
+    environment:
+      IS_PERSISTENT: "FALSE"
+      ANONYMIZED_TELEMETRY: "FALSE"
+    restart: unless-stopped
